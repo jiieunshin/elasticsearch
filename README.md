@@ -10,7 +10,7 @@ git clone https://github.com/jiieunshin/elasticsearch.git
 2. nginx 컨테이너 빌드
 ```
 cd elasticsearch/ElasticDocker/web
-docker build -t custom-nginx:latest
+docker build -t custom-nginx:latest .
 ```
 
 3. 
