@@ -13,9 +13,14 @@ cd elasticsearch/ElasticDocker/web
 docker build -t custom-nginx:latest .
 ```
 
-3. 
+3. ELK 컨테이너 빌드
 ```
 cd ..
 mkdir data
 docker-compose -f single-search-compose.yml up -d
+```
+
+4. eland 컨테이너 빌드
+```
+docker run -it -d docker.elastic.co/eland/eland eland_import_hub_model --url http://localhost:9200 --hub-model-id elastic/distilbert-base-cased-finetuned-conll03-english --task-type ner --name eland
 ```
